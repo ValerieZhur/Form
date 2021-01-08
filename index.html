@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/7928c746bc.js" crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">
+                <img src="assets/images/logo.jpg" alt="logo">
+            </div>
+            <div class="header_logout">
+                <a class="logout_img" href="#"><img src="assets/images/icon_logout.png"></a>
+                <a href="#">Вийти</a>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="section_form">
+    <div class="container">
+        <div class="section_bg"></div>
+        <div class="form">
+            <div class="links_container">
+                <div class="inner_link_container">
+                    <div class="container_link">
+                        <span>Дані користувача</span>
+                    </div>
+                </div>
+                <div class="inner_link_container">
+                    <div class="container_link">
+                        <span>Особисті рахунки</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form_content">
+                <div class="form-group">
+                    <form method="post" action="#update_info">
+                        <div class="form_field">
+                            <label for="name">Ф.І.О.</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form_field">
+                            <label for="address">Адреса</label>
+                            <input type="text" name="address" required>
+                        </div>
+                        <div class="form_field">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" required>
+                            <span id="valid"></span>
+                        </div>
+                        <button class="btn refresh_btn" type="submit">Оновити профіль</button>
+                    </form>
+                </div>
+                <div class="form-group form-group_indent">
+                    <div class="form_title">Змінити пароль</div>
+                    <form method="post" action="#update_pass">
+                        <div class="form_container">
+                            <div class="form_field form_field_indent">
+                                <label for="newPassword">Новий пароль
+                                    <a class="change_btn" href="#">
+                                       <i class="icon far fa-eye"></i>
+                                    </a>
+                                    <input type="password" id="new-password" maxlength="15" class="password-input new-password" name="newPassword">
+                                </label>
+                                <div class="filling_scale">
+                                    <div id="scale" class="filling_scale_item colored"></div>
+                                    <div class="filling_scale_item no-colored"></div>
+                                    <div class="filling_scale_title">Середній</div>
+                                </div>
+                            </div>
+                            <div class="form_field">
+                                <label for="repeatPassword">Повторіть новий пароль
+                                    <input type="password"  id="repeat-password" maxlength="15" class="password-input" name="repeatPassword">
+                                    <a class="change_btn" href="#">
+                                        <i class="icon far fa-eye"></i>
+                                    </a>
+                                </label>
+                                <span id="equality"></span>
+                            </div>
+                        </div>
+                        <button class="btn save_btn" type="submit">Зберегти новый пароль</button>
+                    </form>
+                </div>
+            </div>
+            <div class="form_content">
+                <div class="personal_funds"> Розділ знаходиться в процесі розробки.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+// Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+// Imports
+
+@import "partials/variables";
+
+/* ==========================================================================
+	General Styles
+========================================================================== */
+
+body {
+  font: {
+    family: $font-text;
+    size: $font-size-main;
+    weight: $normal;
+  }
+  background-color: $gray-light;
+  color: $gray-dark;
+  margin: 0;
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+
+/* ==========================================================================
+   Container
+========================================================================== */
+
+.container {
+
+  margin:0 auto;
+  width: 100%;
+}
+
+/* ==========================================================================
+	Header
+========================================================================== */
+
+.header {
+
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: $white;
+  height: 64px;
+  z-index: 1000;
+}
+
+.header_inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: 920px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header_logo {
+  margin-top: 8px;
+  img {
+    width: 108px;
+    height: 48px;
+  }
+}
+
+.header_logout {
+  margin-top: 24px;
+  display: flex;
+  a {
+    font-weight: $semi-bold;
+    color: $gray-dark;
+    line-height: 22px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.logout_img {
+  top: 24px;
+  margin-right: 12px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* ==========================================================================
+	Form
+========================================================================== */
+
+.section_bg {
+  background-color: $green;
+  height: 240px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+}
+
+.form {
+  position: relative;
+  max-width: 920px;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 4px 4px 0px 0px;
+  left: 0;
+  right: 0;
+  margin: -200px auto 0;
+  padding: 5px 15px 100px 15px;
+  min-height: 100vh;
+}
+
+.links_container {
+  display: flex;
+  margin: 56px auto 0;
+  max-width: 540px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid $gray-light;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.container_link {
+  text-decoration: none;
+  span {
+    color: $gray-dark;
+    font-size: $font-size-name;
+    opacity: 0.5;
+    font-weight: normal;
+  }
+}
+
+.form_content {
+  display: none;
+  .personal_funds {
+    text-align: center;
+    margin-top: 20px;
+
+  }
+}
+
+.inner_link_container {
+  width: 270px;
+  text-align: center;
+  &:hover,
+  &.active {
+    border-bottom: 2px solid $green;
+    border-radius: 2px;
+    padding-bottom: 8px;
+    margin-bottom: -10px;
+    .container_link {
+        text-decoration: none;
+        span {
+          font-weight: $semi-bold;
+          opacity: 1;
+        }
+    }
+  }
+}
+
+
+/* form-group */
+
+.form-group {
+
+  margin: 32px auto 0;
+  max-width: 540px;
+  .form_field:first-of-type {
+    margin-top: 0;
+  }
+  .form_field {
+    margin-top: 24px;
+    label {
+      font-size: $font-size-name;
+      font-weight: $normal;
+
+    }
+    input {
+      margin-top: 8px;
+      width: 100%;
+      border: 1px solid $gray;
+      box-sizing: border-box;
+      border-radius: 4px;
+      height: 40px;
+      color: $gray-dark;
+      font-size: $font-size-main;
+      &:focus {
+        outline:none;
+      }
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 24px auto 0;
+  width: 270px;
+  height: 40px;
+  text-align: center;
+  background-color: $green;
+  color: $white;
+  font-weight: $semi-bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+/* form-group */
+
+.form-group {
+  &.form-group_indent {
+    margin: 56px auto 0;
+    .form_field {
+      margin-top: 0;
+    }
+  }
+  max-width: 540px;
+}
+
+.form_title {
+  line-height: 33px;
+  text-align: center;
+  font: {
+    weight: $semi-bold;
+    size: 24px;
+  }
+}
+
+.form_container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  max-width: 540px;
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  .form_field {
+    width: 258px;
+    color: $gray-darken;
+    position: relative;
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+    }
+    &.form_field_indent {
+      margin-right: 24px;
+    }
+    label {
+      font-size: $font-size-name;
+      font-weight: $normal;
+      margin-bottom: 8px;
+      position: relative;
+      display: block;
+    }
+    .change_btn {
+      position: absolute;
+      color: $gray;
+      bottom: 10px;
+      right: 15px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        color: $gray;
+      }
+    }
+    input {
+      width: 258px;
+      height: 40px;
+      color: $gray-dark;
+      font-size: $font-size-main;
+      border: 1px solid $gray;
+      box-sizing: border-box;
+      border-radius: 4px;
+      margin-top: 8px;
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+      }
+      &:focus {
+        outline:none;
+      }
+      &[type="password"] {
+        letter-spacing: 6px;
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+/* Filling scale */
+
+
+.filling_scale {
+  margin-top: 10px;
+}
+
+.filling_scale_item {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  width: 258px;
+  &.no-colored {
+    background-color: $gray-light;
+    z-index: 1;
+  }
+  &.colored {
+    position: absolute;
+    z-index: 2;
+  }
+}
+.filling_scale_title {
+  color: transparent;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: $semi-bold;
+}
+
+.weak {
+  width: 50px;
+  background-color: red;
+}
+.average {
+  width: 182px;
+  background-color: $orange;
+}
+.strong {
+  width: 258px;
+  background-color: $green;
+}
+
+
+
